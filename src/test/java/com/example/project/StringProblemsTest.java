@@ -75,6 +75,31 @@ public class StringProblemsTest{
     }
 
     @Test
+    void testDefont4(){
+        StringProblems o = new StringProblems();
+        String expectedOutput = "apple";
+        String studentOutput= o.deFont("aapple");
+        assertEquals(expectedOutput,studentOutput);
+    }
+
+    @Test
+    void testDefont5(){
+        StringProblems o = new StringProblems();
+        String expectedOutput = "abee";
+        String studentOutput= o.deFont("abee");
+        assertEquals(expectedOutput,studentOutput);
+    }
+
+    @Test
+    void testDefont6(){
+        StringProblems o = new StringProblems();
+        String expectedOutput = "bring";
+        String studentOutput= o.deFont("xbring");
+        assertEquals(expectedOutput,studentOutput);
+    }
+
+
+    @Test
     void testWithoutX1(){
         StringProblems o = new StringProblems();
         String expectedOutput = "Hi";

@@ -26,13 +26,9 @@ public class StringProblems{
     // Given two strings, append them together (known as "concatenation") 
     // and return the result. However, if the concatenation creates a double-char, 
     // then omit one of the chars, so "abc" and "cat" yields "abcat".
-    // Except keep the first char if it is 'a' and keep the second char if it is 'b'. 
     // conCat("abc", "cat") → "abcat"
     // conCat("dog", "cat") → "dogcat"
     // conCat("abc", "") → "abc"
-    // deFront("aapple") -> "apple"
-    // deFront("abee") -> "abee"
-    // deFront("xbring") -> "bring"
     public String conCat(String s1, String s2){
         //implement code here
         int length1 = s1.length();
@@ -51,13 +47,23 @@ public class StringProblems{
     // deFront("Hello") → "llo"
     // deFront("java") → "va"
     // deFront("away") → "aay"
+    // deFront("aapple") -> "apple"
+    // deFront("abee") -> "abee"
+    // deFront("xbring") -> "bring"
     public String deFont(String s1){
         //implement code here
         String first = s1.substring(0,1);
+        String second = s1.substring(1,2);
         int length = s1.length();
         if (first.equals("a")) {
-            return "a" + s1.substring(2,length);
-        } 
+            if (second.equals("b")) {
+                return s1;
+            }
+            return "a" + s1.substring(2, length);
+        }
+        if (second.equals("b")) {
+            return s1.substring(1, length);
+        }
         return s1.substring(2, length);
     }
 
