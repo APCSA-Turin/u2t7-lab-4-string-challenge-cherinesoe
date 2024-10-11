@@ -1,3 +1,5 @@
+package com.example.project;
+
 public class StringProblems{
     //empty constructor
     public StringProblems(){}
@@ -33,10 +35,15 @@ public class StringProblems{
         //implement code here
         int length1 = s1.length();
         int length2 = s2.length();
+        if (length2 == 0) {
+            return s1;
+        } else if (length1 == 0) {
+            return s2;
+        }
         String last = s1.substring(length1 - 1, length1);
         String first = s2.substring(0, 1);
         if (last.equals(first)) {
-            return s1.substring(0, length1 - 1) + s2.substring(1, length2);
+            return s1.substring(0, length1 - 1) + s2;
         } 
         return s1 + s2;
     }
@@ -82,10 +89,10 @@ public class StringProblems{
             if (last.equals("x")){
                 return s1.substring(1, length - 1);
             }
+            return s1.substring(1, length);
         } else {
             return s1.substring(0, length - 1);
         }
-        return s1.substring(0, length);
     }
 
     // Given a string str, if the string starts with "f" return "Fizz".
@@ -120,11 +127,11 @@ public class StringProblems{
     public String fizzString2(int x){
         if (x % 3 == 0) {
             if (x % 5 == 0) {
-                return "FizzBuzz";
+                return "FizzBuzz!";
             }
-            return "Fizz";
+            return "Fizz!";
         } else if (x % 5 == 0) {
-            return "Buzz";
+            return "Buzz!";
         }
         return x + "!";
     }
