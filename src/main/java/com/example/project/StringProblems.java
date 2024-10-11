@@ -43,7 +43,7 @@ public class StringProblems{
         String last = s1.substring(length1 - 1, length1);
         String first = s2.substring(0, 1);
         if (last.equals(first)) {
-            return s1.substring(0, length1 - 1) + s2.substring(0, length2);
+            return s1.substring(0, length1 - 1) + s2;
         } 
         return s1 + s2;
     }
