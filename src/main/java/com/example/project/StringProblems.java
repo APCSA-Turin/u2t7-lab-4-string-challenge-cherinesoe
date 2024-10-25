@@ -33,7 +33,7 @@ public class StringProblems{
     // conCat("abc", "") → "abc"
     public String conCat(String s1, String s2){
         //implement code here
-        int length1 = s1.length();
+        int length1 = s1.length();a
         int length2 = s2.length();
         if (length2 == 0) {
             return s1;
